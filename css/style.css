@@ -1,0 +1,295 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Raleway';
+    padding: 0;
+    margin: 0;
+}
+h2, h3 {
+    padding: 0;
+    margin: 0;
+}
+
+/* ----- header styles ----- */
+header{
+    background-image: url(../assests/banner.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    height: 40vh;
+}
+
+header div.flex-wrapper {
+    background-color: #192e44;
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+}
+
+header div.flex-wrapper h2 {
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+}
+
+header div.flex-wrapper nav.display {
+    display: none;
+}
+
+header div.flex-content {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 25px 0 0 0;
+}
+header div.flex-content h2 {
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header div.flex-content h2:after {
+    content: "";
+    display: block;
+    width: 115px;
+    height: 1px;
+    background-color:#fa3737;
+    margin-top: 10px;
+}
+
+header div.flex-content p {
+    color: #fbfbfb;
+}
+
+header div.flex-content button {
+    background-color: #fa3737;
+    border: none;
+    color: #fff;
+    padding: 10px 25px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+header div.flex-content button:hover {
+    background-color: #ee5050;
+}
+
+@media only screen and (min-width: 520px) {
+    header {
+        height: 50vh;
+    }
+    header div.flex-wrapper nav.display {
+        display: unset;
+    }
+
+    header div.flex-wrapper {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: unset;
+    }
+
+    header div.flex-wrapper nav.display {
+        flex: 0 0 calc(50% - 30px);
+    }
+
+    header div.flex-wrapper nav.display ul {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+    }
+
+    header div.flex-wrapper nav.display ul li a {
+        color: #dbdddf;
+        text-decoration: none;
+    }
+
+    header div.flex-content button {
+        margin-top: 18px;
+    }
+
+    header div.flex-wrapper nav.display ul li:first-of-type a:after {
+        content: "";
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color:#fa3737;
+        margin-top: 3px;
+    }
+
+}
+
+/* ----- */
+
+/* ----styles sections---- */
+section {
+    display: flex;
+    flex-direction: column;
+    background-color: #f7f7f7;
+    padding: 50px 15px;
+}
+section div.header-title {
+    text-align: center;
+}
+section div.header-title h2 {
+    color: #215487;
+}
+
+
+section article {
+    background-color: #fff;
+    padding: 30px 25px;
+    margin-top: 30px;
+    box-shadow: 0px 18px 40px -16px rgba(0,0,0,0.25);
+}
+
+section article h3 {
+    color: #215487;
+    margin-bottom: 15px;
+}
+
+section article p {
+    color: #b8babf;
+}
+
+section article div.circle {
+    border-radius: 50%;
+    background-color: #ffecec;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+section div.link {
+    margin-top: 35px;
+    text-align: center;
+    
+}
+
+section div.link a,
+section div.link a:visited {
+    color: #215487;
+}
+
+@media only screen and (min-width: 520px) {
+    section div.flex-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    section article:not(:first-of-type){
+        margin-left: 15px;
+    }
+
+}
+
+
+/* ----- */
+
+/* ----footer styles----- */
+
+footer {
+    background-color: #1a2e45;
+    color: #fff;
+    padding: 50px 15px;
+    font-size: 13px;
+}
+
+footer div.flex-wrapper-paragraph h2 {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+footer div.flex-wrapper-paragraph p {
+    line-height: 20px;
+    width: 300px;
+}
+
+footer nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer nav ul * {
+    text-decoration: none;
+}
+
+footer nav ul li.first-nevel {
+    padding: 50px 0 30px 0;
+}
+
+footer nav ul li.first-nevel a::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #fa3737;
+    margin-top: 15px;
+}
+
+footer nav ul li.first-nevel a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+footer div.flex-wrapper-paragraph p,
+footer nav ul ul li a,
+footer nav ul ul li {
+    color: #5c6673;
+}
+
+footer nav ul ul li {
+    margin: 17px 0 0 0;
+}
+
+footer nav ul ul li a {
+    cursor: pointer;
+}
+
+footer nav ul ul li a:hover {
+    color: #fff;
+}
+
+footer nav ul ul li i {
+    color: #fa3737;
+    margin-right: 8px;
+}
+
+@media only screen and (min-width:520px) {
+    footer div.flex-wrapper {
+        display: flex;
+        justify-content: space-around;
+    }
+    footer div.flex-wrapper div.flex-wrapper-paragraph {
+        display: flex;
+        flex-direction: column;
+        margin-left: 50px;
+    }
+    nav {
+        display: flex;
+        justify-content: space-around;
+        flex: 0 0 calc(60% - 10px);
+    }
+}
+
+
+/*------*/
